@@ -1,0 +1,22 @@
+[
+    {"IDnumber":"70266", "productName":"кепка", "price":"15",
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3730323636_01.jpg", "quantity":"16"},
+    {"IDnumber":"61", "productName":"майка", "price":"40", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/484f4d4546413631_01.jpg", "quantity":"5"},         
+    {"IDnumber":"84", "productName":"олимпийка", "price":"45",
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/545241434b3834_01.jpg", "quantity":"34"},           
+    {"IDnumber":"77905", "productName":"значок", "price":"2.5", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3737393035_01.jpg", "quantity":"167"},           
+    {"IDnumber":"79236", "productName":"календарь", "price":"8", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3739323336_01.jpg", "quantity":"36"},           
+    {"IDnumber":"78764", "productName":"карты", "price":"5", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3738373634_01.jpg", "quantity":"78"},           
+    {"IDnumber":"2017", "productName":"свитер", "price":"30",
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/4d4b303241573137_01.jpg", "quantity":"12"},           
+    {"IDnumber":"70808", "productName":"галстук", "price":"12", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3730383038_01.jpg", "quantity":"98"},           
+    {"IDnumber":"70142", "productName":"кухонная перчатка", "price":"5", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3730313432_01.jpg", "quantity":"36"},           
+    {"IDnumber":"77343", "productName":"шарф", "price":"15", 
+        "photo":"https://shop.tottenhamhotspur.com/persImages/views/3737343334_01.jpg", "quantity":"157"}        
+]

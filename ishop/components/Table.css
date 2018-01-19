@@ -1,0 +1,17 @@
+.photo{
+    width: 35em;
+}
+.count{
+    width: 3em;
+}
+.text{
+    width: 5em;
+}
+.Table{
+    display: inline-block;
+    background-color: aquamarine;
+}
+.product{
+    border: solid black 1px
+}
+

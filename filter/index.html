@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>filter</title>
+
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+    <script src="stringArray.js"></script>       
+    <script src="MyList.js"></script>           
+    <script src="FilterBlock.js"></script> 
+    <script src="DownButton.js"></script>             
+    <div id="container"></div>  
+  <script> 
+    debugger;
+    var divFirstStringIndex = 3;
+    var divLength = 5;
+    var myList = React.createElement(MyList, {strings:stringArray, divFirstStringIndex:divFirstStringIndex,
+         divLength:divLength});    
+
+    ReactDOM.render(
+        React.createElement(FilterBlock, {element:myList}), document.getElementById('container')
+    );
+  </script>
+  </body>
+</html>
