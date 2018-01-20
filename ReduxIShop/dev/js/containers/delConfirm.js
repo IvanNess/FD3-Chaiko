@@ -31,8 +31,7 @@ class DelConfirm extends Component{
 
 function mapStateToProps(state){
     return{
-        confirmMode: state.activeUser.confirmMode,
-        activeUser: state.activeUser
+        confirmMode: state.delConfirm.confirmMode,
     }
 };
 

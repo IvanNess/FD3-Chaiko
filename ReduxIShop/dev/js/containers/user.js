@@ -37,7 +37,7 @@ class MyUser extends Component{
                       </button>
                       <button onClick={()=>{
                           console.log('delete clicked');
-                          this.props.showConfirmWindow(this.props.activeUser);
+                          this.props.showConfirmWindow();
                       }}>Удалить</button>
                     </div>
                 )
@@ -69,7 +69,7 @@ function mapStateToProps(state){
         allactiveUser: state.activeUser,
         activeUser: state.activeUser.activeUser,
         clickedUser: state.activeUser.clickedUser,
-        rowWorkMode: state.activeUser.rowWorkMode,
+        rowWorkMode: state.editMode.rowWorkMode,
         isEditMode: state.editMode.isEditMode,
         editUser: state.editMode.editUser,
         editMode: state.editMode,

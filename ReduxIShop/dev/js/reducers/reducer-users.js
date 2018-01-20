@@ -33,6 +33,7 @@ export default function(state=null, action){
               return state;
           }
           case 'DELETE':
+              console.log('USER DELETE');
               state.every((v,i,a)=>{
                   if(v.id==action.payload.activeUser.id){
                       state.splice(i, 1);
@@ -42,7 +43,6 @@ export default function(state=null, action){
                   }
               })
               return state;
-              
         }
     return !state? 
     [

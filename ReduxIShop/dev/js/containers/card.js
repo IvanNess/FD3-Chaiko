@@ -53,9 +53,7 @@ class Card extends Component{
                         this.props.validate, this.props.activeUser
                         )}}>Сохранить
                     </button>
-                    <button onClick={()=>{this.props.onCancel(
-                        this.props.activeUser
-                    )}}>Отмена</button>
+                    <button onClick={()=>{this.props.onCancel()}}>Отмена</button>
                 </div>
             );              
         }

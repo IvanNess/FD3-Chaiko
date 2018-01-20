@@ -67,12 +67,13 @@ export const myOnSave = (validateArr, activeUser)=>{
     }
 }
 
-export const myOnCancel = (activeUser)=>{
+export const myOnCancel = ()=>{
     console.log('CANCEL');    
     return{
         type: 'CANCEL',
         payload: {
-            activeUser, rowWorkMode:1
+            rowWorkMode:2,
+            cardWorkMode: 3
         }
     }
 }
@@ -88,25 +89,21 @@ export const onMyDelete = (activeUser)=>{
     }
 }
 
-export const isDelConfirmed = (shouldBeDeleted, activeUser)=>{
+export const isDelConfirmed = (shouldBeDeleted)=>{
     console.log('DELETE CONFIRMATION');    
-    console.log(activeUser);
     return{
         type: 'DEL_CONFIRM',
         payload: {
-            activeUser,
             shouldBeDeleted
         }
     }
 }
 
-export const showConfirmWindow = (activeUser)=>{
+export const showConfirmWindow = ()=>{
     console.log('SHOW CONFIRM');    
-    console.log(activeUser);
     return{
         type: 'SHOW_CONFIRM',
         payload: {
-            activeUser,
             delConfirmMode:1
         }
     }
