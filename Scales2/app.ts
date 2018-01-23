@@ -1,11 +1,27 @@
 
 class Product{
-    name:string;
-    scale: number;
+    protected name:string;
+    protected scale: number;
     constructor(name:string, scale:number){
         this.name = name;
         this.scale = scale;
     }
+}
+
+interface IScalable{
+    getName():string;
+    getScale():number;    
+}
+
+class Apple extends Product implements IScalable{
+    getName():string{
+        return this.name;
+    }
+    getScale():number{
+        return this.scale;
+    }    
+}
+class Tomato extends Product implements IScalable{
     getName():string{
         return this.name;
     }
@@ -14,21 +30,17 @@ class Product{
     }
 }
 
-class Apple extends Product{}
-class Tomato extends Product{}
-
 class Scales {
-
-    products:Array<Product>;
+    products:Array<IScalable>;
     constructor(){
         this.products=[];
     }
-    add(product:Product):Scales{
+    add(product:IScalable):Scales{
         this.products.push(product);
         return this;
     }
     getSumScale():number{
-        return this.products.reduce((r:number, v:Product):number=>{
+        return this.products.reduce((r:number, v:IScalable):number=>{
             return r=r+v.getScale();
         }, 0);
     }

@@ -13,12 +13,6 @@ var Product = /** @class */ (function () {
         this.name = name;
         this.scale = scale;
     }
-    Product.prototype.getName = function () {
-        return this.name;
-    };
-    Product.prototype.getScale = function () {
-        return this.scale;
-    };
     return Product;
 }());
 var Apple = /** @class */ (function (_super) {
@@ -26,6 +20,12 @@ var Apple = /** @class */ (function (_super) {
     function Apple() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Apple.prototype.getName = function () {
+        return this.name;
+    };
+    Apple.prototype.getScale = function () {
+        return this.scale;
+    };
     return Apple;
 }(Product));
 var Tomato = /** @class */ (function (_super) {
@@ -33,6 +33,12 @@ var Tomato = /** @class */ (function (_super) {
     function Tomato() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Tomato.prototype.getName = function () {
+        return this.name;
+    };
+    Tomato.prototype.getScale = function () {
+        return this.scale;
+    };
     return Tomato;
 }(Product));
 var Scales = /** @class */ (function () {
