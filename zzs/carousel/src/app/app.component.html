@@ -1,0 +1,28 @@
+<div id='backgroundBox' style="display:none; position:fixed; top:0; left:0; background-color: grey;
+   opacity:0.9; z-index:2" (click)="closeVideo($event)">
+</div>
+<div id='videoDiv'>
+  <div id='close' (click)='closeVideo($event)'>
+    <svg width=30 height=30 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+      version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" 
+      xml:space="preserve">
+      <g>
+        <polygon points="82.2,11.5 49.7,44 17.2,11.5 10.8,17.8 43.3,50.3 10.8,82.8 17.2,89.2 49.7,56.7 82.2,89.2 88.5,82.8 56,50.3    88.5,17.8  "/>
+      </g>
+    </svg>
+  </div>
+  <iframe id="videoFrame" class="e2e-iframe-trusted-src" 
+     [src]="videoSrc|safe" style="display:none; z-index:3; position:absolute; "
+     frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<!-- You can now use your library component in app.component.html -->
+<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+  <div ngxSlickItem *ngFor="let slide of slides; let i=index" class="slide" >
+        <img src="{{ slide.img }}" alt="" width="90%" style="margin:auto" (mouseover)="hideImage($event)">
+        <img src="{{ slide.imgS }}" alt="{{i}}" width="90%" style="margin:auto; display:none" 
+          (mouseout)="showImage($event)" (click)="imageClicked($event)" 
+        >
+  </div>
+</ngx-slick>

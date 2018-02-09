@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  {{info}}
+</div>
+<teams 
+  *ngFor="let item of getTeamArr();" 
+  [team]=item
+  (updateBestMfsEv)='updateBestMfsHandler($event)'
+>
+</teams>
+<bestMfs
+  [teamArr]='teamArr'
+  [updateBestMfs] = 'updateBestMfs'
+  [position] = "'d'"
+>
+</bestMfs>
+<bestMfs
+  [teamArr]='teamArr'
+  [updateBestMfs] = 'updateBestMfs'
+  [position] = "'m'"
+>
+</bestMfs>
+<bestMfs
+  [teamArr]='teamArr'
+  [updateBestMfs] = 'updateBestMfs'
+  [position] = "'f'"
+>
+</bestMfs>
+<bestMfs
+  [teamArr]='teamArr'
+  [updateBestMfs] = 'updateBestMfs'
+  [position] = "'g'"
+>
+</bestMfs>
+<div class="result">
+<teamTable 
+  *ngFor="let item of getTeamArr();" 
+  [team]=item
+>
+</teamTable>
+</div>
+
