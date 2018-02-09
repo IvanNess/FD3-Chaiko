@@ -1,0 +1,7 @@
+<div>
+    <img [src]="imageSrc" (click)="imageClicked($event)">
+    <iframe class="e2e-iframe-trusted-src" width="560" height="315"
+     [src]="videoSrc|safe"
+     frameborder="0" allowfullscreen>
+    </iframe>
+</div>

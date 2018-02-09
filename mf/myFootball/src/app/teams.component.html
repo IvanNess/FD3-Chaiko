@@ -1,0 +1,44 @@
+<div class='teamName'>{{team.name}}</div>
+<div class='teamBlock'>
+Вратари
+<mfRow 
+  *ngFor="let item of team.g; let i=index" 
+  [player]=item 
+  (updateArrEv)='updateArrHandler($event)'
+  [position]="'g'"
+>
+</mfRow>
+</div>
+<hr>
+<div class='teamBlock'>
+Защитники
+<mfRow 
+  *ngFor="let item of team.d; let i=index" 
+  [player]=item 
+  (updateArrEv)='updateArrHandler($event)'
+  [position]="'d'"
+>
+</mfRow>
+</div>
+<hr>
+<div class='teamBlock'>
+Полузащитники
+<mfRow 
+  *ngFor="let item of team.m; let i=index" 
+  [player]=item 
+  (updateArrEv)='updateArrHandler($event)'
+  [position]="'m'"
+>
+</mfRow>
+</div>
+<hr>
+<div class='teamBlock'>
+Нападающие
+<mfRow 
+  *ngFor="let item of team.f; let i=index" 
+  [player]=item 
+  (updateArrEv)='updateArrHandler($event)'
+  [position]="'f'"
+>
+</mfRow>
+</div>

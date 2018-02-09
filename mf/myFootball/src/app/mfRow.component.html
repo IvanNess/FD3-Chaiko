@@ -1,0 +1,6 @@
+<div>
+    {{player.name}} {{player.initialGameDefPower}} {{player.initialGameOffPower}} 
+    {{player.playedPositionsShort}} {{player.tempdefensive}} {{player.tempoffensive}}
+    {{player.gaPerGame}}
+    <input type='checkbox' name='mf' [checked]='true' (change)='checkBoxHandler($event)'>
+</div>
