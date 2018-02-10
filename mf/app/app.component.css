@@ -1,0 +1,15 @@
+teams{
+    border: solid red 2px;
+    margin: 1em;
+    float: left;
+}
+bestMfs{
+    border: solid blueviolet 2px;
+    margin: 1em;
+    float: left;    
+}
+.result{
+    border: solid greenyellow 2px;
+    margin: 1em;
+    float: left;    
+}
