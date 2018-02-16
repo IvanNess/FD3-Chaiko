@@ -2,9 +2,13 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from "@angular/common/http";
-import { standings } from './standings'
-import { Subject } from 'rxjs'
-import { Iteam } from './iteam'
+import { standings } from './standings';
+import { Subject } from 'rxjs';
+import { Iteam } from './iteam';
+import { offStat } from './offStat';
+import { defStat } from './defStat';
+import {teamArray} from './teamArrCreation';
+
 
 @Injectable()
 export class MyDataSource {
@@ -19,7 +23,9 @@ export class MyDataSource {
   private resultArrEvent: Subject<{teamName:string, playerName:Array<string>, 
     skills:Array<number>, index:number}>; //события, из которых будет сделан итоговый массив
   private collectResult:Subject<boolean>//запустить сбор данных для итоговог массив. запускается кнопкой сэйв
-  
+  //private offStat;
+  //private defStat;
+  private teamArr: Array<any>; //массив всех игроков
 
   constructor(private http:HttpClient) {
     this.standings = standings.standing;
@@ -44,7 +50,17 @@ export class MyDataSource {
         this.getObservable();
       }
     });
+    //this.defStat = defStat;
+    //this.offStat = offStat;
+    this.teamArr = teamArray;
+    console.log(this.teamArr);
   }
+
+  getTeamArr():Array<any>{
+    console.log('getTeamArr');
+    //debugger;
+    return this.teamArr;
+  }  
 
   getCollectResultSubject():Subject<boolean>{
     return this.collectResult;
@@ -124,3 +140,44 @@ export class MyDataSource {
     }
     
 }
+
+/*
+function combineTeamArr(defStat:Array<any>, offStat:Array<any>):Array<any>{
+  //объединим в один массив защитные и атакующие показатели игроков
+  //var allPlayers = JSON.parse(JSON.stringify(defStat));
+  var allPlayers = defStat;
+  allPlayers.forEach(v=> {
+    offStat.forEach(v2=> {
+      if (v.name==v2.name){
+        v.assistTotal = v2.assistTotal;
+        v.dispossessedPerGame = v2.dispossessedPerGame;
+        v.dribbleWonPerGame = v2.dribbleWonPerGame;
+        v.foulGivenPerGame = v2.foulGivenPerGame;
+        v.goal = v2.goal;
+        v.keyPassPerGame = v2.keyPassPerGame;
+        v.offsideGivenPerGame = v2.offsideGivenPerGame;
+        v.shotsPerGame = v2.shotsPerGame;
+        v.turnoverPerGame = v2.turnoverPerGame;
+      }
+    });
+  });
+return allPlayers;
+}
+
+function assignPositions(teamArr: Array<any>){
+  teamArr.forEach((v,i,a)=>{
+    v.m.forEach((vara)=>{
+      vara.checked=true;
+    });
+    v.f.forEach((vara)=>{
+      vara.checked=true;
+    });
+    v.d.forEach((vara)=>{
+      vara.checked=true;
+    });
+    v.g.forEach((vara)=>{
+      vara.checked=true;
+    });
+  });  
+}
+*/
